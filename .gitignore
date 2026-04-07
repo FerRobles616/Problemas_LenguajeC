@@ -1,0 +1,13 @@
+# Archivos compilados
+*.exe
+*.o
+*.out
+
+# Archivos de respaldo
+*.swp
+*.swo
+*~
+
+# Carpetas generadas
+.vscode/
+*.dSYM/
