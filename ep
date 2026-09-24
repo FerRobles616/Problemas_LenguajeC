@@ -1,0 +1,75 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+float suma(float n1, float n2);
+float resta(float n1, float n2);
+float multip(float n1, float n2);
+float division(float n1, float n2);
+
+int main () {
+    float n1 = 0, n2 = 0;
+    float resultado;
+    int opcion = 0;
+   
+    cout << "\tCalculadora:" << endl;
+    cout << "1. Suma" << endl;
+    cout << "2. Resta" << endl;
+    cout << "3. Multiplicación" << endl;
+    cout << "4. Division" << endl;
+    cout << "Ingrese una opcion: ";
+    cin >> opcion;
+    if (opcion >= 1 && opcion <= 4) {
+        cout << "Ingrese el primer numero: " << endl;
+        cin >> n1;
+        cout << "Ingrese el segundo numero: " << endl;
+        cin >> n2;
+    }
+   
+    switch (opcion) {
+        case 1:
+            resultado = suma(n1, n2);
+            cout << "El resultado de la suma entre:" << n1 << " y " << n2  << endl;
+            cout << "es: " << resultado;
+            break;
+        case 2:
+            resultado = resta(n1, n2);
+            cout << "El resultado de la suma entre:" << n1 << " y " << n2 << endl;
+            cout << "es: " << resultado;
+            break;
+        case 3:
+            resultado = multip(n1, n2);
+            cout << "El resultado de la suma entre:" << n1 << " y " << n2 << endl;
+            cout << "es: " << resultado;
+            break;
+        case 4:
+            if (n2 != 0){
+                resultado = division(n1, n2);
+                cout << "El resultado de la suma entre:" << n1 << " y " << n2 << endl;
+                cout << "es: " << resultado;
+            } else {
+                cout << "No se puede dividir entre 0";
+            }
+            break;
+        default:
+            cout << "La opcion no es valida";
+    }
+    return 0;
+}
+
+float suma(float n1, float n2) {
+    return n1 + n2;
+}
+
+float resta(float n1, float n2) {
+    return n1 - n2;
+}
+
+float multip(float n1, float n2) {
+    return n1 * n2;
+}
+
+float division(float n1, float n2) {
+    return n1 / n2;
+}
